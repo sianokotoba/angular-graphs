@@ -1,8 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+/**
+ * We are going to use the App -> Core -> Other Modules architecture
+ * for lazy loading
+ */
+import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +16,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
